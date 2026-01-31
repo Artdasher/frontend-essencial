@@ -1,0 +1,36 @@
+#header-principal {
+    background: linear-gradient(135deg, rgb(156, 51, 177) 0%,rgb(83, 201, 237) 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}   
+
+.botao {
+    background-color: rgb(37, 37, 255);
+    color: whitesmoke;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: all 0.3s;
+}
+
+.botao:hover {
+    background-color: blueviolet;
+    transform: scale(1.1);
+}
+
+.card {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#header-principal .botao{
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+}
+
