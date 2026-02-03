@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0; /* Evita barras de rolagem desnecessárias */
+}
+
+#resumo-principal {
+    padding: 10% 5%; 
+    min-height: 400px;
+    margin: 0; 
+    text-align: center;
+    background-image: 
+        linear-gradient(135deg, rgba(0, 135, 212, 1) 0%, rgba(0, 173, 179, 0.7) 100%),
+        url("https://wallpaperaccess.com/full/5089528.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    box-shadow: 1px 15px 24px -6px rgba(0,0,0,0.21);
+}
+
+#resumo-principal #nome {
+    color: white;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+    font-size: 3rem;
+    margin: 0;
+}
+
+#resumo-principal #subnome {
+    color: rgb(255, 189, 189);
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+#resumo-principal #descricao {
+    color: white;
+    font-weight: 500;
+    max-width: 600px;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+#resumo-principal #button {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#resumo-principal .button1-resumo {
+    background-color: rgba(255, 189, 189, 0.2);
+    color: whitesmoke;
+    padding: 15px 30px;
+    border: 0.04px solid white;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+#resumo-principal .button1-resumo:hover {
+    background-color: rgba(255, 189, 189, 0.4);
+}
+
+#sobre h2{
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0, 89, 141, 0.7) 0%, rgba(94, 250, 255, 0.7) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- MEDIA QUERIES --- */
+
+@media (max-width: 625px) {
+    #resumo-principal {
+        padding: 60px 20px;
+    }
+
+    #resumo-principal #nome {
+        font-size: 2rem; 
+    }
+
+    #resumo-principal #button {
+        flex-direction: column;
+        width: 100%;
+    }
+}
