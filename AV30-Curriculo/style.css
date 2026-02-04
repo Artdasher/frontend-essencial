@@ -1,15 +1,16 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0; /* Evita barras de rolagem desnecessárias */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
 }
 
+/* Resumo principal */
 #resumo-principal {
     padding: 10% 5%; 
     min-height: 400px;
     margin: 0; 
     text-align: center;
     background-image: 
-        linear-gradient(135deg, rgba(0, 135, 212, 1) 0%, rgba(0, 173, 179, 0.7) 100%),
+        linear-gradient(135deg, rgb(127, 0, 212) 0%, rgba(0, 78, 179, 0.7) 100%),
         url("https://wallpaperaccess.com/full/5089528.jpg");
     background-size: cover;
     background-position: center;
@@ -18,29 +19,25 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
-
-    box-shadow: 1px 15px 24px -6px rgba(0,0,0,0.21);
 }
 
 #resumo-principal #nome {
     color: white;
-    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
     font-size: 3rem;
     margin: 0;
 }
 
 #resumo-principal #subnome {
-    color: rgb(255, 189, 189);
+    color: rgb(253, 189, 255);
     font-weight: 600;
     font-size: 1.5rem;
-    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
 #resumo-principal #descricao {
     color: white;
-    font-weight: 500;
+    font-weight: 550;
     max-width: 600px;
-    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    
 }
 
 #resumo-principal #button {
@@ -59,39 +56,309 @@ body {
     font-weight: bold;
     transition: 0.3s;
     text-decoration: none;
+    align-items: center;
 }
 
 #resumo-principal .button1-resumo:hover {
     background-color: rgba(255, 189, 189, 0.4);
 }
 
+/* Sobre */
+
 #sobre h2{
     text-align: center;
-    background: linear-gradient(135deg, rgba(0, 89, 141, 0.7) 0%, rgba(94, 250, 255, 0.7) 100%);
+    background: linear-gradient(135deg, rgba(190, 1, 196, 1) 0%, rgba(39, 61, 255, 0.8) 90%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 2rem;
+}
+
+#sobre p {
+    text-align: center;
+    color: rgb(105, 105, 105);
+    padding: 20px 20px;
+}
+
+.icon-btn {
+    width: 24px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    vertical-align: middle;
+}
+
+/* Sessão para proprietário */
+
+#proprietario {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+#proprietario h2 {
+    color: #000000;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#proprietario h3 {
+    color: #666;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.container-cards {
+    list-style: none; 
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-cards li {
+    background: white;
+    padding: 30px;
+    border-radius: 30px;
+    border-bottom: 4px solid #a200ff; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.container-cards li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(171, 0, 194, 0.15);
+}
+
+.container-cards li strong {
+    display: block;
+    color: #8b00c2;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container-cards li p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+}
+
+/* Sessão para hóspede */
+
+#hospede {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+#hospede h2 {
+    color: #000000;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#hospede h3 {
+    color: #666;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.container-cards1 {
+    list-style: none; 
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-cards1 li {
+    background: white;
+    padding: 30px;
+    border-radius: 30px;
+    border-bottom: 4px solid #0004ff; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.container-cards1 li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 84, 194, 0.15);
+}
+
+.container-cards1 li strong {
+    display: block;
+    color: #0003c2;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container-cards1 li p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+}
+
+/* Skillset */
+
+#skillset {
+    background-image: 
+        linear-gradient(135deg, rgba(0, 49, 212, 0.8) 0%, rgba(122, 0, 179, 0.7)100%),
+        url("https://images7.alphacoders.com/926/926566.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-bottom: 30px;
+}
+
+#skillset h2 {
+    font-size: 2rem;
+}
+
+.container-skill {
+    list-style: none; 
+    padding: 0;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px;
+}
+
+.container-skill li strong {
+    display: block;
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container-skill h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.container-skill li {
+    background: rgba(255, 255, 255, 0.205) 100%;
+    padding: 30px;
+    border-radius: 30px;
+    border: 1px solid #ffffff79; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.container-skill li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 84, 194, 0.15);
+}
+
+.container-skill li p {
+    color: #c9c9c9;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+}
+
+
+/* CALL TO ACTION */
+
+#calltoaction {
+    background: #1a1b1e; /* Um tom mais escuro e elegante */
+    padding: 60px 20px 20px;
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+#calltoaction h2 {
+    background: linear-gradient(135deg, #f710ff 0%, #0821fd 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+#calltoaction h3 {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.5;
+}
+
+/* Container dos Contatos */
+.call {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.call li {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px 30px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 200px;
+}
+
+.call li:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #f710ff;
+}
+
+.call li strong {
+    display: block;
+    color: #f710ff;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.call li p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.direitos {
+    color: #666;
+    font-weight: 400;
+    font-size: 0.75rem;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 
 
+/* --- MEDIA --- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* --- MEDIA QUERIES --- */
-
-@media (max-width: 625px) {
+@media (max-width: 750px) {
     #resumo-principal {
         padding: 60px 20px;
     }
@@ -103,5 +370,16 @@ body {
     #resumo-principal #button {
         flex-direction: column;
         width: 100%;
+    }
+
+    .container-skill {
+        flex-direction: column;
+    }
+      .call {
+        flex-direction: column;
+        align-items: center;
+    }
+    .call li {
+        width: 80%;
     }
 }
