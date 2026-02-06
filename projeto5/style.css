@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #27A3F5;
+    background: linear-gradient(135deg, #9310ff 40%, #2e5fff 100%);
     min-width: 100vh;
     align-items: center;
     justify-content: center;
@@ -63,7 +63,7 @@ header p {
     width: 100%;
     padding: 15px;
     border: 2px solid #f0f0f0;
-    border-radius: 10px;
+    border-radius: 20px;
     font-size: 1em;
     transition: all 0.3s ease;
 }
@@ -73,4 +73,93 @@ header p {
     outline: none;
     border: #667eea;
     box-shadow: 0 0 0 3px rgba(102, 126, 134, 0.2);
+}
+
+.form-control.success input,
+.form-control.success textarea {
+    border-color: #4caf50;
+    background-color: #f8fff8;
+}
+
+.form-control.error input,
+.form-control.error textarea {
+    border-color: #f44336;
+    background-color: #f8fff8;
+}
+
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    color: #f44336;
+    font-size: 0.85em;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.form-button:active {
+    transform: translateY(0);
+}
+
+.successMessage {
+    display: none;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid #c3e6cb;
+}
+
+.successMessage.show {
+    display: block;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .container{
+        padding: 30px 20px;
+        margin: 10px;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
 }
