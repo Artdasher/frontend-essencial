@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #9310ff 40%, #2e5fff 100%);
+    background: linear-gradient(135deg, #bc9fff 40%, #8a9fff 100%);
     min-width: 100vh;
     align-items: center;
     justify-content: center;
@@ -62,8 +62,13 @@ header p {
     display: block;
     width: 100%;
     padding: 15px;
-    border: 2px solid #f0f0f0;
+    border: 2px solid transparent;
     border-radius: 20px;
+    background-image:
+    linear-gradient(white, white),
+    linear-gradient(to right, #8a9fff, #e58eff);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
     font-size: 1em;
     transition: all 0.3s ease;
 }
@@ -71,7 +76,6 @@ header p {
 .form-control input:focus,
 .form-control textarea:focus {
     outline: none;
-    border: #667eea;
     box-shadow: 0 0 0 3px rgba(102, 126, 134, 0.2);
 }
 
@@ -103,7 +107,7 @@ header p {
 .form-button {
     width: 100%;
     padding: 15px;
-    background-color: #667eea;
+    background: linear-gradient(135deg, #193ddb -10%, #8a9fff 50%, #e58eff 100%);
     color: white;
     border: none;
     border-radius: 10px;

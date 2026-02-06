@@ -1,9 +1,9 @@
-document.addEventListener('DomContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
 
     function isValidEmail (email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\s.[^\s@]+$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
     // Função para mostrar estado do campo
@@ -35,6 +35,43 @@ document.addEventListener('DomContentLoaded', function() {
         const field = document.getElementById(id);
         field.addEventListener('blur', () => validateField(field)); // Valida ao sair
         field.addEventListener('input', () => validateField(field)); // Valida digitando
-    })
+    });
 
+    // Validar formulário completo
+    function validateForm() {
+        let isValid = true;
+
+        ['name', 'email', 'subject', 'message'].forEach(id => {
+            const field = document.getElementById(id);
+            validateField(field);
+            if (!field.closest('.form-control').classList.contains('success')){
+                isValid = false;
+            }
+        })
+        return isValid;
+    };
+
+    // Submit-envio
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        if(validateForm()) {
+            // Simular envio
+            form.style.opacity = '0.7';
+            
+            form.style.pointerEvents = 'none';
+
+            setTimeout(() => {
+                successMessage.classList.add('show');
+                form.reset();
+                form.style.opacity = '1';
+                form.style.pointerEvents = 'auto';
+
+                // Resetar todas as classes após reset
+                document.querySelectorAll('.form-control').forEach(control => {
+                    control.classList.remove('success', 'error')
+                });
+            }, 1500);
+        }
+    });
 });
