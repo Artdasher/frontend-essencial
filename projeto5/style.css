@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* indica tamanho, levará em conta até a borda */
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #bc9fff 40%, #8a9fff 100%);
-    min-width: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);
+    min-height: 100vh; 
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -17,10 +19,11 @@ body {
 .container {
     background-color: white;
     padding: 40px;
-    border-radius: 50px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 50px; 
+    box-shadow: 0 15px 30px rgba(238, 156, 167, 0.3);
     max-width: 500px;
     width: 100%;
+    border: 8px solid #fffdfa; 
 }
 
 .header {
@@ -29,31 +32,34 @@ body {
 }
 
 .header h1 {
-    color: #333;
-    font: 2.2em;
+    color: #ff75a0;
+    font-size: 2.2em;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 0px #ffe3ec;
 }
 
-header p {
-    color: #666;
+.header p {
+    color: #b185db; 
     font-size: 1.1em;
+    font-weight: 500;
 }
 
 .form-control {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     position: relative;
 }
 
 .form-control label {
     display: block;
     margin-bottom: 8px;
-    color: #333;
-    font-weight: 500;
+    color: #6a4c93;
+    font-weight: 700;
     font-size: 0.95em;
+    padding-left: 15px;
 }
 
 .form-control label i {
-    color: #667eea;
+    color: #ff92ad;
     margin-right: 8px;
 }
 
@@ -61,43 +67,42 @@ header p {
 .form-control textarea {
     display: block;
     width: 100%;
-    padding: 15px;
-    border: 2px solid transparent;
-    border-radius: 20px;
+    padding: 18px;
+    border: 3px solid transparent;
+    border-radius: 35px;
     background-image:
-    linear-gradient(white, white),
-    linear-gradient(to right, #8a9fff, #e58eff);
+        linear-gradient(white, white),
+        linear-gradient(to right, #ffafbd, #ffc3a0);
     background-origin: border-box;
     background-clip: padding-box, border-box;
     font-size: 1em;
+    color: #5a447a;
     transition: all 0.3s ease;
 }
 
 .form-control input:focus,
 .form-control textarea:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(102, 126, 134, 0.2);
+    box-shadow: 0 0 15px rgba(255, 175, 189, 0.5);
+    transform: scale(1.02);
 }
 
-.form-control.success input,
-.form-control.success textarea {
-    border-color: #4caf50;
-    background-color: #f8fff8;
+.form-control.success input {
+    background-image: linear-gradient(white, white), linear-gradient(to right, #b2f7ef, #7bf1a8);
 }
 
-.form-control.error input,
-.form-control.error textarea {
-    border-color: #f44336;
-    background-color: #f8fff8;
+.form-control.error input {
+    background-image: linear-gradient(white, white), linear-gradient(to right, #ff9aa2, #ffb7b2);
 }
 
 .form-control small {
     visibility: hidden;
     position: absolute;
-    bottom: -25px;
-    left: 0;
-    color: #f44336;
-    font-size: 0.85em;
+    bottom: -18px;
+    left: 20px;
+    color: #ff6b6b;
+    font-weight: 700;
+    font-size: 0.8em;
 }
 
 .form-control.error small {
@@ -106,64 +111,111 @@ header p {
 
 .form-button {
     width: 100%;
-    padding: 15px;
-    background: linear-gradient(135deg, #193ddb -10%, #8a9fff 50%, #e58eff 100%);
+    padding: 18px;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
     color: white;
     border: none;
-    border-radius: 10px;
-    font-size: 1.1em;
-    font-weight: 600;
+    border-radius: 35px; 
+    font-size: 1.2em;
+    font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    margin-top: 30px;
+    box-shadow: 0 8px 15px rgba(255, 154, 158, 0.4);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .form-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 20px rgba(255, 154, 158, 0.5);
+    filter: brightness(1.05);
 }
 
 .form-button:active {
-    transform: translateY(0);
+    transform: translateY(2px);
 }
 
 .successMessage {
-    display: none;
-    background-color: #d4edda;
-    color: #155724;
+    display: flex;
+    background-color: #f0fff4;
+    color: #2d6a4f;
     padding: 20px;
-    border-radius: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
     text-align: center;
     margin-top: 20px;
-    border: 1px solid #c3e6cb;
+    border: 2px dashed #b7e4c7;
+    font-size: 1em;
+    opacity: 0;
+}
+
+.successMessage i {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #52b788;
 }
 
 .successMessage.show {
     display: block;
-    animation: slideIn 0.5s ease;
+    opacity: 1;
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to{
-        opacity: 1;
-        transform: translate(0);
-    }
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
-@media (max-width: 600px) {
-    .container{
-        padding: 30px 20px;
-        margin: 10px;
+/* ADAPTAÇÃO PARA MOBILE (Responsividade) */
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; 
+    }
+
+    .container {
+        padding: 25px 20px; 
+        border-radius: 35px;
+        border-width: 4px;
     }
 
     .header h1 {
         font-size: 1.8em;
+    }
+
+    .header p {
+        font-size: 0.95em;
+    }
+
+    .form-control input, 
+    .form-control textarea {
+        padding: 15px;
+        font-size: 0.95em;
+    }
+
+    .form-button {
+        padding: 15px;
+        font-size: 1.1em;
+    }
+
+    .form-control small {
+        font-size: 0.75em;
+        bottom: -16px;
+    }
+}
+
+@media (max-height: 700px) {
+    .container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .form-control {
+        margin-bottom: 15px;
     }
 }
